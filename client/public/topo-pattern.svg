@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+  <defs>
+    <pattern id="topo" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <ellipse cx="60" cy="60" rx="50" ry="38" fill="none" stroke="#8c6f4a" stroke-width="0.8" opacity="0.12"/>
+      <ellipse cx="60" cy="60" rx="38" ry="28" fill="none" stroke="#8c6f4a" stroke-width="0.8" opacity="0.12"/>
+      <ellipse cx="60" cy="60" rx="26" ry="18" fill="none" stroke="#8c6f4a" stroke-width="0.8" opacity="0.12"/>
+      <ellipse cx="60" cy="60" rx="14" ry="9" fill="none" stroke="#8c6f4a" stroke-width="0.8" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="120" height="120" fill="url(#topo)"/>
+</svg>

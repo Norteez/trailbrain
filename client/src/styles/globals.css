@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Bark — warm tans and browns (primary surfaces, text) */
+  --color-bark-50: #faf6f0;
+  --color-bark-100: #f0e8d8;
+  --color-bark-200: #ddd0b8;
+  --color-bark-300: #c4ae8e;
+  --color-bark-400: #a98b66;
+  --color-bark-500: #8c6f4a;
+  --color-bark-600: #7a5c39;
+  --color-bark-700: #634a2e;
+  --color-bark-800: #4e3a25;
+  --color-bark-900: #3d2d1d;
+
+  /* Moss — muted greens (primary action, success) */
+  --color-moss-50: #f2f5ee;
+  --color-moss-100: #dfe8d6;
+  --color-moss-200: #c2d3b0;
+  --color-moss-300: #9eb882;
+  --color-moss-400: #7b9d58;
+  --color-moss-500: #5e7f3e;
+  --color-moss-600: #4b6630;
+  --color-moss-700: #3b5126;
+  --color-moss-800: #2e3f1e;
+  --color-moss-900: #243118;
+
+  /* Semantic colors */
+  --color-paper: #f5f0e8;
+  --color-ink: #1a1410;
+  --color-danger: #c0392b;
+  --color-caution: #d97706;
+  --color-info: #2563eb;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: #c4ae8e;
+    color: #1a1410;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain-overlay {
+    position: relative;
+  }
+
+  .grain-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/grain.svg');
+    background-repeat: repeat;
+    pointer-events: none;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+  }
+}
